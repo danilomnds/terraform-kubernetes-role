@@ -11,8 +11,8 @@ variable "rules" {
   type = any
   default = {
     rule1 = {
-      api_groups = ["", "apps", "extensions", "autoscaling", "networking.k8s.io","batch","policy"]
-      resources  = ["bindings", "configmaps","cronjobs", "daemonsets", "deployments", "deployments/scale", "endpoints", "endpointslices", "events", "healthstates", "horizontalpodautoscalers", "hostendpoints", "imagesets", "ingressclasses", "ingresses", "limitranges", "jobs", "jobs/status", "persistentvolumeclaims", "pods", "pods/log", "pods/exec", "pods/portforward", "podtemplates", "replicasets", "replicationcontrollers", "secrets", "serviceaccounts", "services", "statefulsets","poddisruptionbudgets"]
+      api_groups = ["", "apps", "extensions", "autoscaling", "networking.k8s.io","batch","policy","crd.projectcalico.org/v1"]
+      resources  = ["bindings", "configmaps","cronjobs", "daemonsets", "deployments", "deployments/scale", "endpoints", "endpointslices", "events", "healthstates", "horizontalpodautoscalers", "hostendpoints", "imagesets", "ingressclasses", "ingresses", "limitranges", "jobs", "jobs/status", "persistentvolumeclaims", "pods", "pods/log", "pods/exec", "pods/portforward", "podtemplates", "replicasets", "replicationcontrollers", "secrets", "serviceaccounts", "services", "statefulsets","poddisruptionbudgets","networkpolicies","networksets"]
       verbs      = ["*"]
     }
     rule2 = {
